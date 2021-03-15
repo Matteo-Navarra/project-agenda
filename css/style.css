@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-image: url(../img/brickwall.png);
+    font-family: 'Akaya Telivigala', cursive;
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/* Container */
+
+#container {
+    display: inline-block;
+    position: relative;
+    width: 550px;
+    margin-top: 100px;
+    background: white;
+    font-size: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 25px 50px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(20, 0, 0, 0.08);
+}
+
+#container li {
+    list-style: none;
+    text-decoration: none;
+}
+
+#container::before {
+    content: '';
+    position: absolute;
+    width: 98%;
+    height: 100%;
+    left: 1%;
+    bottom: -6px;
+    background-color: white;
+    z-index: -1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 25px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+#container::after {
+    content: '';
+    position: absolute;
+    width: 96%;
+    height: 100%;
+    left: 2%;
+    bottom: -12px;
+    background-color: white;
+    z-index: -2;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 12.5px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+
+/* End Container */
+
+
+/* form  */
+
+#container form {
+    width: 100%;
+    position: relative;
+    float: left;
+    display: block;
+}
+
+#container form input {
+    width: 100%;
+    display: block;
+    float: left;
+    padding: 25px 20px;
+    font-family: 'Akaya Telivigala', cursive;
+    font-size: 25px;
+    font-weight: 100;
+    background-color: rgba(0, 0, 0, 0.03);
+    opacity: 0.30;
+    outline: 0;
+}
+
+#container form input:focus {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.008)
+}
+
+
+/* end form */
+
+
+/*To Do List*/
+
+#todo-list {
+    width: 100%;
+    float: left;
+    display: block;
+    box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.55);
+    text-align: left;
+}
+
+#todo-list li.todo {
+    display: block;
+    width: inherit;
+    float: left;
+    padding: 18px 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.095);
+}
+
+#todo-list li.todo :last-of-type {
+    border-bottom: 0;
+}
+
+#todo-list li.todo div:first-of-type {
+    width: 40px;
+    display: block;
+    float: left;
+    height: 100%;
+}
+
+#todo-list li.todo div:first-of-type>span {
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#todo-list li.todo p {
+    display: block;
+    float: left;
+    width: 458px;
+    font-size: 20px;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#todo-list li.todo .punti-esclamativi {
+    display: block;
+    width: 32px;
+    float: left;
+    text-align: center;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.level3 {
+    color: red;
+}
+
+.level2 {
+    color: orange;
+}
+
+.level1 {
+    color: green;
+}
+
+#todo-list li.todo .delete {
+    text-decoration: none;
+    list-style: none;
+    color: #333;
+    text-align: center;
+    float: left;
+    width: 24px;
+    height: 24px;
+    display: block;
+    border-radius: 50%;
+    line-height: 20px;
+    vertical-align: middle;
+    display: none;
+}
+
+
+/* To Do List Hover */
+
+#todo-list li.todo:hover .delete {
+    display: block;
+}
+
+
+/* End To Do List Hover */
+
+#todo-list li.todo:hover p {
+    width: 434px;
+}
+
+#todo-list li.todo.done:hover p {
+    width: 458px;
+}
+
+#todo-list li.todo.done p {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.25);
+}
+
+#todo-list li.todo.done .punti-esclamativi {
+    display: none;
+}
+
+#todo-list li.todo.done div:first-of-type>span {
+    border-color: green;
+    opacity: 0.5;
+}
+
+#todo-list li.todo.done div:first-of-type>span::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    background-color: green;
+}
+
+
+/* End To Do List  */
